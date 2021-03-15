@@ -10,3 +10,10 @@ class Jogador:
 
     def sofrerDano(self):
         self.vidasDoJogador -= 1
+
+class JogadorDummy(Jogador):
+    def __init__(self):
+        self.vidasDoJogador = 3
+
+    def __del__(self):
+        self.vidasDoJogador = 0

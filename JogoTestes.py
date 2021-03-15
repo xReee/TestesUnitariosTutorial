@@ -1,15 +1,8 @@
 from Jogo import Jogo
 from Monstro import *
 from Ataque import *
-from Jogador import Jogador
+from Jogador import *
 import unittest
-
-class JogadorDummy(Jogador):
-    def __init__(self):
-        self.vidasDoJogador = 3
-    
-    def __del__(self):
-        self.vidasDoJogador = 0
 
 class JogoTestes(unittest.TestCase):
     def setUp(self):
