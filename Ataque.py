@@ -19,7 +19,7 @@ class Ataque:
 
             count += 1
 
-        return self.conferirSeGanhou
+        return self.conferirSeGanhou()
 
     def acertouAtaque(self):
         self.armasCorretasNaPosicaoCorreta += 1
@@ -29,7 +29,3 @@ class Ataque:
 
     def conferirSeGanhou(self):
         return self.armasCorretasNaPosicaoCorreta == 4
-
-
-class AtaqueDummy(Ataque):
-    pass
