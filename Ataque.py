@@ -16,8 +16,8 @@ class Ataque:
             if armaDefensiva == self.armas[count]:
                 self.acertouAtaque()
 
-            elif armaDefensiva in self.armas:
-                self.acertouArma()
+            # elif armaDefensiva in self.armas:
+            #     self.acertouArma()
 
             count += 1
 
@@ -32,16 +32,6 @@ class Ataque:
     def conferirSeGanhou(self):
         return self.armasCorretasNaPosicaoCorreta == 5
 
-class AtaqueTests(unittest.TestCase):
-    def teste_conferirAtaque_quandoTiverArmaCertaPosErrada(self):
-        armas = [1,2,3,4]
-        ataque = Ataque(armas)
-        defesaDoMonstro = [1,2,4,3] # tem 2 armas certas e duas armas erradas, ne?
-
-        ataque.conferirAtaque(defesaDoMonstro)
-
-        self.assertEqual(ataque.armasCorretasNaPosicaoCorreta, 2)
-        self.assertEqual(ataque.armasCorretasNaPosicaoErrada, 2)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

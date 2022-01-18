@@ -19,3 +19,6 @@ class Jogo:
 
         if not self.vitoria:
             self.jogador.sofrerDano()
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
