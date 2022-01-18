@@ -1,3 +1,5 @@
+import unittest
+
 class Ataque:
     def __init__(self, armas):
         self.armas = armas
@@ -28,4 +30,18 @@ class Ataque:
         self.armasCorretasNaPosicaoErrada += 1
 
     def conferirSeGanhou(self):
-        return self.armasCorretasNaPosicaoCorreta == 4
+        return self.armasCorretasNaPosicaoCorreta == 5
+
+class AtaqueTests(unittest.TestCase):
+    def teste_conferirAtaque_quandoTiverArmaCertaPosErrada(self):
+        armas = [1,2,3,4]
+        ataque = Ataque(armas)
+        defesaDoMonstro = [1,2,4,3] # tem 2 armas certas e duas armas erradas, ne?
+
+        ataque.conferirAtaque(defesaDoMonstro)
+
+        self.assertEqual(ataque.armasCorretasNaPosicaoCorreta, 2)
+        self.assertEqual(ataque.armasCorretasNaPosicaoErrada, 2)
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
