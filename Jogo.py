@@ -1,5 +1,6 @@
 from Monstro import Monstro
 from Ataque import Ataque
+import unittest
 
 class Jogo:
     def __init__(self, monstro, jogador):
