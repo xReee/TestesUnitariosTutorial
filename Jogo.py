@@ -18,4 +18,4 @@ class Jogo:
         self.vitoria = ataque.conferirAtaque(self.monstro.defesa)
 
         if not self.vitoria:
-            self.jogador.sofrerDano()
+            self.jogador.vidasDoJogador -= 1
