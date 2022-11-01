@@ -5,4 +5,4 @@
 Faça download do código para fazer os exercicios
 
 ## Quer jogar um jogo de testes unitários??
-Acesse -> http://xreee.github.io/reset/
+Acesse -> https://xreee.github.io/reset/pt/index.html
